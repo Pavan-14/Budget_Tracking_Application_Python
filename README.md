@@ -6,3 +6,10 @@
    * perform CURD operations.
    * create reports using Pandas.
    * store the logs inside a log file.
+
+
+# weather finding application
+- the application code available in master branch.
+
+# Timer countdown application
+- the application code available in master branch.
