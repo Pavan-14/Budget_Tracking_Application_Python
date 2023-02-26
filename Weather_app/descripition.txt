@@ -1,52 +1,22 @@
-Descripition about the task:
-============================
-> The task is to create a personal budgeting app that enables users to track their income and expenses, set budget goals, and view their spending habits. 
-> To accomplish this, the app will use various libraries such as tkinter, pandas, datetime, and sqlite3. The sqlite3 library will create a database to store the user's budget data. 
-> The tkinter library will be used to create a graphical user interface (GUI) for the app, including widgets such as labels, buttons, text boxes, and tables. 
-> The pandas library will manipulate the data and generate charts and tables to visualize the user's budget data. The datetime library will store and display the date and time of the transactions. 
-> The app will allow users to enter their income and expense data, which will be added to their budget. Users will be able to view their budget information, set budget goals, and generate reports. 
-> Additionally, the app will use the tkcalendar library to allow users to select dates for their income and expenses.
+> This is a Python code for a weather application that allows users to get weather details of a particular location. 
+  The code imports the necessary modules such as requests, json, timezonefinder, and geopy to make the API request and fetch weather details. 
+  The tkinter module is also imported to provide a GUI interface for the user to enter the location and display the weather details.
+
+> The code defines a function named location_info() which gets the city name entered by the user and calls the get_LatLong() function to fetch the latitude and longitude of the entered city. 
+  The call_weather_api() function is then called with the latitude and longitude values to make an API request and fetch weather details of that location. The fetched details are then displayed on the tkinter interface.
+
+> The code also defines a function named get_LatLong() which uses the geopy module to fetch the latitude and longitude of the entered city. 
+  It first initializes the Nominatim API with a user_agent value and then calls the geocode() function with the city name to get the location details. 
+  The TimezoneFinder module is then used to get the timezone of the location using the fetched latitude and longitude values. The latitude and longitude values are returned to the calling function.
+
+> The call_weather_api() function creates an API request object using the requests module and makes a GET request to the openweathermap API with the latitude, longitude, and API key values. 
+  The fetched data is then parsed using the json module and the weather details such as temperature, pressure, humidity, wind speed, etc. are displayed on the tkinter interface.
+
+> The tkinter interface is created using the Tk() function of the tkinter module. It creates a window with the title "weather App" and a size of 800x400 pixels. 
+  The GUI has a search button, a text entry field to enter the city name, and labels to display the weather details. When the user enters the location and clicks on the search button, the location_info() function is called to fetch and display the weather details.
+
+> Overall, this code allows users to enter a location and get the current weather details such as temperature, pressure, humidity, wind speed, etc. of that location using the openweathermap API. 
+  The tkinter interface provides an easy-to-use graphical interface for the user to enter the location and view the weather details.
 
 
-Script Explanation:
-===================
-1. The given code is for creating a personal budgeting app using Python's tkinter library for the GUI, sqlite3 library for database management, 
-   and pandas library for data manipulation and visualization. Here's a detailed explanation of the code:
-
-2. First, the required libraries are imported using the import statements.
-
-3. The display is created using the Tk() method of the tkinter library. 
-   The display's attributes like title, size, background color, and icon are also set using methods like title(), geometry(), config(), and iconbitmap().
-
-4. Next, a label with the application name is created using the Label() method of the tkinter library. 
-   It is configured with attributes like text, font, width, height, relief, and color. The label is then packed using the pack() method.
-
-5. A calendar widget is created using the Calendar() method of the tkcalendar library. It is then placed on the display screen using the pack() method.
-
-6. Next, a function named grab_date() is defined to get the selected date from the calendar widget. It returns the selected date in the format dd-mm-yyyy.
-
-7. Another function named generate_report() is defined to generate an Excel report containing the data stored in the sqlite3 database. 
-   It first creates a connection to the database using the create_connection() function from the database module. 
-   It then uses the pd.ExcelWriter() method to create a new Excel file and writes the data to it using pandas dataframes. 
-   It also shows a message box indicating that the report is generated successfully.
-
-8. Another function named budget_values_insert() is defined to insert the user's budget details into the sqlite3 database. 
-   It first gets the user's input values for item name, amount, choice type (income or expense), and date. 
-   It then creates tables inside the database using the main() function from the database module. 
-   Finally, it inserts the values into the tables using the insert_values() function from the same module. 
-   It also shows a message box indicating that the data is added successfully and clears the user input fields.
-
-9. Next, three labels are created for item name, amount, and choice type using the Label() method. 
-   They are placed on the display screen using the place() method.
-
-10. Three entry widgets are created using the Entry() method to get the user's input values for item name, amount, and choice type. 
-    They are placed on the display screen using the place() method.
-
-11. Two radio buttons are created using the Radiobutton() method to get the user's choice for income or expense. 
-    They are placed on the display screen using the place() method.
-
-12. A button widget named "Submit" is created using the Button() method to submit the user's input values. 
-    It is placed on the display screen using the place() method.
-
-13. Finally, the mainloop() method is called to run the display and keep it on the screen until the user exits the program.
 
