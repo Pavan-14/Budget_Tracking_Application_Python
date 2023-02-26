@@ -8,7 +8,7 @@
    * store the logs inside a log file.
 
 
-# weather finding application
+# weather prediction application
 - the application code available in master branch.
 
 # Timer countdown application
